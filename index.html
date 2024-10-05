@@ -8,63 +8,122 @@
   </head>
   <body>
     <div class="container">
-      <h1>Loot Splitter</h1>
-      <div class="team">
-        <div class="form-group">
-          <label for="members">Members</label>
-          <input type="number" id="members" min="1" step="1" value="1" />
+      <div class="lootSplitter">
+        <h1>Loot Splitter</h1>
+        <div class="team">
+          <div class="form-group">
+            <label for="members">Members</label>
+            <input type="number" id="members" min="1" step="1" value="1" />
+          </div>
+        </div>
+        <form id="lootForm">
+          <div class="loot">
+            <div class="form-group">
+              <label for="pp">PP</label>
+              <input type="number" id="pp" min="0" step="1" value="0" />
+            </div>
+            <div class="form-group">
+              <label for="gp">GP</label>
+              <input type="number" id="gp" min="0" step="1" value="0" />
+            </div>
+            <div class="form-group">
+              <label for="ep">EP</label>
+              <input type="number" id="ep" min="0" step="1" value="0" />
+            </div>
+            <div class="form-group">
+              <label for="sp">SP</label>
+              <input type="number" id="sp" min="0" step="1" value="0" />
+            </div>
+            <div class="form-group">
+              <label for="cp">CP</label>
+              <input type="number" id="cp" min="0" step="1" value="0" />
+            </div>
+          </div>
+        </form>
+        <div id="result" class="resultContainer">
+          <div class="result">
+            <div class="rs">
+              <div class="rs-label">PP:</div>
+              <div id="rs-pp"></div>
+            </div>
+            <div class="rs">
+              <div class="rs-label">GP:</div>
+              <div id="rs-gp"></div>
+            </div>
+            <div class="rs">
+              <div class="rs-label">EP:</div>
+              <div id="rs-ep"></div>
+            </div>
+            <div class="rs">
+              <div class="rs-label">SP:</div>
+              <div id="rs-sp"></div>
+            </div>
+            <div class="rs">
+              <div class="rs-label">CP:</div>
+              <div id="rs-cp"></div>
+            </div>
+          </div>
+          <div class="remaining">
+            Remaining: <span id="remaining"></span> CP
+          </div>
         </div>
       </div>
-      <form id="lootForm">
-        <div class="loot">
-          <div class="form-group">
-            <label for="pp">PP</label>
-            <input type="number" id="pp" min="0" step="1" value="0" />
-          </div>
-          <div class="form-group">
-            <label for="gp">GP</label>
-            <input type="number" id="gp" min="0" step="1" value="0" />
-          </div>
-          <div class="form-group">
-            <label for="ep">EP</label>
-            <input type="number" id="ep" min="0" step="1" value="0" />
-          </div>
-          <div class="form-group">
-            <label for="sp">SP</label>
-            <input type="number" id="sp" min="0" step="1" value="0" />
-          </div>
-          <div class="form-group">
-            <label for="cp">CP</label>
-            <input type="number" id="cp" min="0" step="1" value="0" />
-          </div>
-        </div>
-      </form>
-      <div id="result"  class="resultContainer">
-        <div class="result">
-          <div class="rs">
-            <div class="rs-label">PP:</div>
-            <div id="rs-pp"></div>
-          </div>
-          <div class="rs">
-            <div class="rs-label">GP:</div>
-            <div id="rs-gp"></div>
-          </div>
-          <div class="rs">
-            <div class="rs-label">EP:</div>
-            <div id="rs-ep"></div>
-          </div>
-          <div class="rs">
-            <div class="rs-label">SP:</div>
-            <div id="rs-sp"></div>
-          </div>
-          <div class="rs">
-            <div class="rs-label">CP:</div>
-            <div id="rs-cp"></div>
-          </div>
-        </div>
-        <div class="remaining">Remaining: <span id="remaining"></span> CP</div>
-      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Coin</th>
+            <th>Cp</th>
+            <th>Sp</th>
+            <th>Ep</th>
+            <th>Gp</th>
+            <th>Pp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Copper</td>
+            <td>1</td>
+            <td>1/10</td>
+            <td>1/50</td>
+            <td>1/100</td>
+            <td>1/1000</td>
+          </tr>
+          <tr>
+            <td>Silver</td>
+            <td>10</td>
+            <td>1</td>
+            <td>1/5</td>
+            <td>1/10</td>
+            <td>1/100</td>
+          </tr>
+          <tr>
+            <td>Electrum</td>
+            <td>50</td>
+            <td>5</td>
+            <td>1</td>
+            <td>1/2</td>
+            <td>1/20</td>
+          </tr>
+          <tr>
+            <td>Gold</td>
+            <td>100</td>
+            <td>10</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1/10</td>
+          </tr>
+          <tr>
+            <td>Platinum</td>
+            <td>1,000</td>
+            <td>100</td>
+            <td>50</td>
+            <td>10</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
