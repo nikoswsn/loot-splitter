@@ -3,18 +3,17 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 .container {
     width: 100%;
     max-width: 1440px;
-    height: calc(100% - 100px);
+    min-height: calc(100vh - 100px);
     margin: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer {
@@ -43,7 +42,8 @@ h1 {
 
 .loot {
     display: flex;
-    
+    justify-content: space-between;
+
     gap: 20px;
 
 }
@@ -53,6 +53,18 @@ h1 {
     width: fit-content;
 }
 
+.fee-group {
+    flex-direction: column;
+    margin: auto;
+}
+.suffix {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+
+    pointer-events: none; /* Prevent interaction with the % text */
+    color: #888;
+  }
 label {
     display: block;
     margin-bottom: 5px;
@@ -119,4 +131,16 @@ tr:hover {
 }
 td:first-child {
     font-weight: bold;
+}
+
+.conversion-options {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.conversion-options label {
+    display: inline-block;
+    vertical-align: middle;
 }
